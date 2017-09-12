@@ -1,5 +1,7 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var apps = express();
+apps.use(express.static(bodyParser.json()));
 apps.get("/", function (req, res) {
     res.send("Server is running");
 });
