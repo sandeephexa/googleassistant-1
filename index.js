@@ -27,12 +27,10 @@ var callrestapi = function (apid, apkey, carrier, flight, year, month, day) {
 
                     r = body;
                 }
-                console.log(JSON.stringify(r)+"srinjkj");
                 // Call callback with no error, and result of request
                 resolve(r);
 
             } catch (e) {
-                console.log(JSON.stringify(e)+"srnmo");
                 // Call callback with error
                 reject(e);
             }
@@ -57,8 +55,7 @@ function callApi(req, res) {
     //console.log(intent + "=>" + apid + "=>" + apkey + "=>" + carrier + "=>" + flightno + "=>" + flightdate[2] + "=>" + flightdate[1] + "=>" + flightdate[0]);
     if (intent == "flight_arriving_date") {
         return callrestapi(apid, apkey, carrier, flightno, flightdate[0], flightdate[1], flightdate[2]).then(function (result1) {
-            console.log(JSON.stringify(fligarriv));
-            console.log(JSON.stringify(errdata));
+          
             var fligarriv = result1;
             if (fligarriv) {
                 console.log(JSON.stringify(fligarriv));
@@ -77,12 +74,17 @@ function callApi(req, res) {
                         }
                     }
                 }
-            }
-         
-        }).catch(function (errdata) {
-            var errosdat = JSON.parse(errdata);
+             else if(fligarriv.hasOwnProperty('error'))
+            {
+            var errosdat = JSON.parse(fligarriv);
             console.log(errosdat+"sromojk");
             app1.ask(errosdat.error.errorMessage);
+            }
+            }
+           
+         
+        }).catch(function (errdata) {
+
         })
     }
 }
