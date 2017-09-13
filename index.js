@@ -11,7 +11,6 @@ function callApi(req, res) {
     const app1 = new ApiAiApp({ request: req, response: res });
     let flightid = app1.getArgument('flightid');
     var intent = app1.getIntent();
-    console.log(intent);
     switch (intent) {
         case 'flight_id':
             app1.ask("Flight is arrived. Actual Departs time is 7:44PM IST and Arrival time is 9:19PM IST. Scheduled Departs time is 9:10PM and arrival time is 10:10PM. Do you want to know anything else?");
