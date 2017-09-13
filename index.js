@@ -60,7 +60,13 @@ function callApi(req, res) {
             if (fligarriv) {
                 console.log(fligarriv.hasOwnProperty('error')+"srini231211987");
                 console.log(JSON.stringify(fligarriv));
-                if (fligarriv.hasOwnProperty('appendix')) {
+                if(fligarriv.hasOwnProperty('error') && fligarriv.request.airline.hasOwnProperty('error'))
+            {
+            var errosdat = JSON.parse(fligarriv);
+            console.log(errosdat+"sromojk");
+            app1.ask(errosdat.error.errorMessage);
+            }
+             else   if (fligarriv.hasOwnProperty('appendix')) {
                     if (fligarriv.appendix.hasOwnProperty('airlines')) {
                         if (fligarriv.appendix.airlines[0].active) {
                             console.log(fligarriv.appendix.airlines[0].active);
@@ -75,12 +81,7 @@ function callApi(req, res) {
                         }
                     }
                 }
-             else if(fligarriv.hasOwnProperty('error'))
-            {
-            var errosdat = JSON.parse(fligarriv);
-            console.log(errosdat+"sromojk");
-            app1.ask(errosdat.error.errorMessage);
-            }
+            
             }
            
          
