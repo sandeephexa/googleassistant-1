@@ -27,12 +27,12 @@ var callrestapi = function (apid, apkey, carrier, flight, year, month, day) {
 
                     r = body;
                 }
-                console.log(JSON.stringify(r));
+                console.log(JSON.stringify(r)+"srinjkj");
                 // Call callback with no error, and result of request
                 resolve(r);
 
             } catch (e) {
-                console.log(JSON.stringify(e));
+                console.log(JSON.stringify(e)+"srnmo");
                 // Call callback with error
                 reject(e);
             }
