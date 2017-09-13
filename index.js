@@ -62,9 +62,8 @@ function callApi(req, res) {
                 console.log(JSON.stringify(fligarriv));
                 if(fligarriv.hasOwnProperty('error'))
             {
-            var errosdat = JSON.parse(fligarriv);
-            console.log(errosdat+"sromojk");
-            app1.ask(errosdat.error.errorMessage);
+             console.log("sromojk");    
+            app1.ask(fligarriv.error.errorMessage);
             }
              else   if (fligarriv.hasOwnProperty('appendix')) {
                     if (fligarriv.appendix.hasOwnProperty('airlines')) {
