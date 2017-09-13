@@ -60,7 +60,7 @@ function callApi(req, res) {
             if (fligarriv) {
                 console.log(fligarriv.hasOwnProperty('error')+"srini231211987");
                 console.log(JSON.stringify(fligarriv));
-                if(fligarriv.hasOwnProperty('error') && fligarriv.request.airline.hasOwnProperty('error'))
+                if(fligarriv.hasOwnProperty('error'))
             {
             var errosdat = JSON.parse(fligarriv);
             console.log(errosdat+"sromojk");
