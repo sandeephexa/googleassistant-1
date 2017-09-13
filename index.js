@@ -43,7 +43,7 @@ var callrestapi = function (apid, apkey, carrier, flight, year, month, day) {
 }
 
 function callApi(req, res) {
-    console.log(JSON.stringify(req));
+    console.log(req);
     const app1 = new ApiAiApp({ request: req, response: res });
     var intent = app1.getIntent();
     // if (intent == "flight_id") {
