@@ -71,9 +71,13 @@ function callApi(req, res) {
                             console.log(fligarriv.appendix.airlines[0].active);
                             if (fligarriv.appendix.hasOwnProperty('airports')) {
                                 let source = fligarriv.appendix.airports[0];
+                                let destination = fligarriv.appendix.airports[1];
                                 let airports = source.name;
-                                let city = source.city;
-                                let country = source.countryName;
+                                let citys = source.city;
+                                let countrys = source.countryName;
+                                let airportd = destination.name;
+                                let cityd = destination.city;
+                                let countryd = destination.countryName;
                                 console.log(airports + city + country);
 
                             }
