@@ -6,8 +6,8 @@ var apps = express();
 apps.use(bodyParser.json());
 var flightstatus = { 'A': 'Active', 'C': 'Cancelled', 'D': 'Diverted', 'DN': 'Data Source Need', 'L': 'Landed', 'NO': 'Not Operational', 'R': 'Redirected', 'S': 'Scheduled', 'U': 'Unknown' };
 let ApiAiApp = require('actions-on-google').ApiAiAssistant;
-const appid = '6aac18a6';
-const appkey = '40a7e359cb020a07ead5159c2d5d8162';
+const apid = '6aac18a6';
+const apkey = '40a7e359cb020a07ead5159c2d5d8162';
 apps.get("/", function (req, res) {
     res.send("Server is running");
 });
@@ -15,10 +15,10 @@ var callrestapi = function (apid, apkey, carrier, flight, year, month, day) {
     return new Promise(function (resolve, reject) {
         var r;
         var options = {};
-        options.url = `https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/${carrier}/${flight}/arr/${year}/${month}/${day}`;
+        options.url = `https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/${carrier}/${flight}/arr/${year}/${month}/${day}?appId=${apid}&appKey=${apkey}&utc=false`;
         reqnew(options, (error, resps, body) => {
             try {
-
+            console.log(body);
                 if ((typeof body) == "string") {
 
                     var result = JSON.parse(body);
@@ -27,12 +27,12 @@ var callrestapi = function (apid, apkey, carrier, flight, year, month, day) {
 
                     r = body;
                 }
-
+                console.log(JSON.stringify(r));
                 // Call callback with no error, and result of request
                 resolve(r);
 
             } catch (e) {
-
+                console.log(JSON.stringify(e));
                 // Call callback with error
                 reject(e);
             }
@@ -42,8 +42,8 @@ var callrestapi = function (apid, apkey, carrier, flight, year, month, day) {
     });
 }
 
+
 function callApi(req, res) {
-    console.log(req);
     const app1 = new ApiAiApp({ request: req, response: res });
     var intent = app1.getIntent();
     // if (intent == "flight_id") {
@@ -54,27 +54,36 @@ function callApi(req, res) {
     let flightdate = app1.getArgument('date').split('-');
     let flightno = app1.getArgument('any');
     let carrier = app1.getArgument('flight_names');
-    console.log(intent);
+    //console.log(intent + "=>" + apid + "=>" + apkey + "=>" + carrier + "=>" + flightno + "=>" + flightdate[2] + "=>" + flightdate[1] + "=>" + flightdate[0]);
     if (intent == "flight_arriving_date") {
-        return callrestapi(apid, apkey, carrier, flightno, flightdate[2], flightdate[1], flightdate[0]).then(function (result1) {
-            var fligarriv = result1;
+        return callrestapi(apid, apkey, carrier, flightno, flightdate[0], flightdate[1], flightdate[2]).then(function (result1) {
             console.log(JSON.stringify(fligarriv));
-            if (fligarriv.hasOwnProperty('appendix')) {
-                if (fligarriv.appendix.hasOwnProperty('airlines')) {
-                    if (fligarriv.appendix.airlines[0].active) {
-                        console.log(fligarriv.appendix.airlines[0].active);
-                        if (fligarriv.appendix.hasOwnProperty('airports')) {
-                            let source = fligarriv.appendix.airports[0];
-                            let airports = source.name;
-                            let city = source.city;
-                            let country = source.countryName;
-                            console.log(airports + city + country);
+            console.log(JSON.stringify(errdata));
+            var fligarriv = result1;
+            if (fligarriv) {
+                console.log(JSON.stringify(fligarriv));
+                if (fligarriv.hasOwnProperty('appendix')) {
+                    if (fligarriv.appendix.hasOwnProperty('airlines')) {
+                        if (fligarriv.appendix.airlines[0].active) {
+                            console.log(fligarriv.appendix.airlines[0].active);
+                            if (fligarriv.appendix.hasOwnProperty('airports')) {
+                                let source = fligarriv.appendix.airports[0];
+                                let airports = source.name;
+                                let city = source.city;
+                                let country = source.countryName;
+                                console.log(airports + city + country);
 
+                            }
                         }
                     }
                 }
             }
-        });
+         
+        }).catch(function (errdata) {
+            var errosdat = JSON.parse(errdata);
+            console.log(errosdat+"sromojk");
+            app1.ask(errosdat.error.errorMessage);
+        })
     }
 }
 apps.post("/", function (req, res) {
