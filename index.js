@@ -58,9 +58,7 @@ function callApi(req, res) {
           
             var fligarriv = result1;
             if (fligarriv) {
-                console.log(fligarriv.hasOwnProperty('error')+"srini231211987");
-                console.log(JSON.stringify(fligarriv));
-                if(fligarriv.hasOwnProperty('error'))
+            if(fligarriv.hasOwnProperty('error'))
             {
              console.log("sromojk");    
             app1.ask(fligarriv.error.errorMessage);
