@@ -88,8 +88,8 @@ function callApi(req, res) {
                                     newflightss=flightstatus[property];
                                     }
 }
-                                app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd} , Arrival ${estimateda}. Schedule Departure ${scheduledd} , Arrival ${scheduleda}. Do u want to know anything else?`);
-
+                                //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd} , Arrival ${estimateda}. Schedule Departure ${scheduledd} , Arrival ${scheduleda}. Do u want to know anything else?`);
+app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-3)} , Arrival ${estimateda.substring(0, estimateda.length-3)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-3)} , Arrival ${scheduleda.substring(0, scheduleda.length-3)}. Do u want to know anything else?`);
 
                             }
                         }
