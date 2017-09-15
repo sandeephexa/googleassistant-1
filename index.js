@@ -78,7 +78,7 @@ function callApi(req, res) {
                                 let countryd = destination.countryName;
                                 let flightstatuses = fligarriv.flightStatuses[0].status;
                                 let datedep=fligarriv.flightStatuses[0].operationalTimes.estimatedGateDeparture.dateLocal.split('T')[0];
-                                let datearr=fligarriv.flightStatuses[0].operationalTimes.scheduledGateArrival.dateLocal.split('T')[0];
+                                let datearr=fligarriv.flightStatuses[0].operationalTimes.estimatedGateArrival.dateLocal.split('T')[0];
                                 let scheduledd=fligarriv.flightStatuses[0].operationalTimes.scheduledGateArrival.dateLocal.split('T')[1];
                                 let scheduleda=fligarriv.flightStatuses[0].operationalTimes.scheduledGateDeparture.dateLocal.split('T')[1];
                                 let estimatedd=fligarriv.flightStatuses[0].operationalTimes.estimatedGateDeparture.dateLocal.split('T')[1];
