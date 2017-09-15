@@ -118,7 +118,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
 //   );
                                 
 //===========================================                                
-  app1.askWithList(app.buildRichResponse()
+  app1.askWithList(app1.buildRichResponse()
     .addSimpleResponse('Alright')
     .addSuggestions(
       ['Basic Card', 'List', 'Carousel', 'Suggestions']),
