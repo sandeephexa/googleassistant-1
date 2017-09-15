@@ -131,7 +131,6 @@ app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} $
 //       .setTitle('Math & prime numbers')
 //       .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Image alternate text')
 //     )
-  );
 
                                 
                                 
