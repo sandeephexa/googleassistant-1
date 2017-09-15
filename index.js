@@ -97,7 +97,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
                                     .setTitle('Math & prime numbers')
                                     .addButton('Read more', 'https://example.google.com/mathandprimes')
                                     .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Image alternate text')));
-                                 app.askWithList(app.buildRichResponse()
+                                 app1.askWithList(app1.buildRichResponse()
     .addSimpleResponse('Alright')
     .addSuggestions(
       ['Basic Card', 'List', 'Carousel', 'Suggestions']),
