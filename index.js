@@ -113,7 +113,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       .setTitle('Arr')
       .setDescription('42 gods who ruled on the fate of the dead in the ' +
         'afterworld. Throughout the under…')
-      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Egypt',50,50)
+      .setImage('http://www.drivesafe.org.nz/themes/drivesafeorgnz-theme/images/arrival-icon.svg', 'Egypt',25,25)
     )
     // Add third item to the list
     .addItems(app1.buildOptionItem('RECIPES',
