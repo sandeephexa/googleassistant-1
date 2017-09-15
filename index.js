@@ -103,14 +103,14 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     .addItems(app1.buildOptionItem('MATH_AND_PRIME',
       ['math', 'math and prime', 'prime numbers', 'prime'])
       .setTitle('Dep')
-      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\nEst:${estimatedd.substring(0, estimatedd.length-4)}`)
+      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
        .setImage('http://www.clker.com/cliparts/B/X/8/8/p/r/departures-airport-sign-th.png', 'Departure',50,50)
       )
     // Add the second item to the list
     .addItems(app1.buildOptionItem('EGYPT',
       ['religion', 'egpyt', 'ancient egyptian'])
       .setTitle('Arr')
-      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\nEst:${estimatedd.substring(0, estimatedd.length-4)}`)
+      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEstimated:\n${estimatedd.substring(0, estimatedd.length-4)}`)
       .setImage('http://www.drivesafe.org.nz/themes/drivesafeorgnz-theme/images/arrival-icon.svg', 'Egypt',25,25)
     )
     // Add third item to the list
