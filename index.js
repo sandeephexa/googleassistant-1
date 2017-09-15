@@ -102,9 +102,8 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     // Build a list
     app1.buildList('FLIGHT STATUS')
     // Add the first item to the list
-    .addItems(app1.buildOptionItem('MATH_AND_PRIME',
-      ['math', 'math and prime', 'prime numbers', 'prime'])
-      .setTitle('Math & prime numbers')
+    .addItems(app1.buildOptionItem()
+      .setTitle('SOURCE')
       .setDescription('42 is an abundant number because the sum of its ' +
         'proper divisors 54 is greater…')
       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Math & prime numbers'))
