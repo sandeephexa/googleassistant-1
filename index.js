@@ -77,6 +77,8 @@ function callApi(req, res) {
                                 let cityd = destination.city;
                                 let countryd = destination.countryName;
                                 let flightstatuses = fligarriv.flightStatuses[0].status;
+                                let datedep=fligarriv.flightStatuses[0].operationalTimes.estimatedGateDeparture.dateLocal.split('T')[0];
+                                let datearr=fligarriv.flightStatuses[0].operationalTimes.scheduledGateArrival.dateLocal.split('T')[0];
                                 let scheduledd=fligarriv.flightStatuses[0].operationalTimes.scheduledGateArrival.dateLocal.split('T')[1];
                                 let scheduleda=fligarriv.flightStatuses[0].operationalTimes.scheduledGateDeparture.dateLocal.split('T')[1];
                                 let estimatedd=fligarriv.flightStatuses[0].operationalTimes.estimatedGateDeparture.dateLocal.split('T')[1];
@@ -102,14 +104,14 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     // Add the first item to the list
     .addItems(app1.buildOptionItem('MATH_AND_PRIME',
       ['math', 'math and prime', 'prime numbers', 'prime'])
-      .setTitle('Dep')
+      .setTitle(`${datedep}`)
       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
        .setImage('http://www.clker.com/cliparts/B/X/8/8/p/r/departures-airport-sign-th.png', 'Departure',50,50)
       )
     // Add the second item to the list
     .addItems(app1.buildOptionItem('EGYPT',
       ['religion', 'egpyt', 'ancient egyptian'])
-      .setTitle('Arr')
+      .setTitle(`${datearr}`)
       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEstimated:\n${estimatedd.substring(0, estimatedd.length-4)}`)
       .setImage('http://www.drivesafe.org.nz/themes/drivesafeorgnz-theme/images/arrival-icon.svg', 'Egypt',25,25)
     )
