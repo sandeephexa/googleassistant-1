@@ -113,9 +113,8 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:\n${estimateda.substring(0, estimateda.length-4)}`)
       .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Recipe')
     ).addItems(app1.buildOptionItem('RECIPES1',['recipes1'])
-      .setTitle(`Arrival`)
-      .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:\n${estimateda.substring(0, estimateda.length-4)}`)
-      .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Recipe')
+      .setTitle(`Arrival1`)
+      .setDescription(`s`)
     )
   );
 
