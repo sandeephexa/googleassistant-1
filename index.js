@@ -98,7 +98,7 @@ app1.askWithList(app1.buildRichResponse()
     // Build a list
     app1.buildList('Flight Status')
     // Add the first item to the list
-    .addItems(app1.buildOptionItem('MATH_AND_PRIME')
+    .addItems(app1.buildOptionItem('MATH_AND_PRIME',[])
       .setTitle('Math & prime numbers')
       .setDescription('42 is an abundant number because the sum of its ' +
         'proper divisors 54 is greater…')
