@@ -96,30 +96,10 @@ function callApi(req, res) {
 var myKeys = Object.keys(flightstatus) 
 newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
                                 //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd} , Arrival ${estimateda}. Schedule Departure ${scheduledd} , Arrival ${scheduleda}. Do u want to know anything else?`);
-
-//   app1.askWithList(app1.buildRichResponse()
-//     .addSimpleResponse(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`),
-//     // Build a list
-//     app1.buildList('list2')
-//     // Add the first item to the list
-//     .addItems(app1.buildOptionItem()
-//       .setTitle(`${datedep}`)
-//       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
-//        .setImage('https://lh3.googleusercontent.com/K7IBRJz-E1h4gR0wfpcCzwf1MVxV8LXHpqFfKctPdiC54e9GUNTqC_vi_Mhe4KWcB5XnT2ku=w50-h50-e365', 'Departure',50,50)
-//       )
-//     // Add the second item to the list
-//     .addItems(app1.buildOptionItem()
-//       .setTitle(`Arrival`)
-//       .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:\n${estimateda.substring(0, estimateda.length-4)}`)
-//       .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Recipe')
-//     ).addItems(app1.buildOptionItem().setTitle(`${sourcecarrier} => ${destcarrier}`)
-//       .setDescription(`${airports} - ${airportd}`)
-//     )
-//   );
-                                
+                 
 //===========================================                                
   app1.askWithList(app1.buildRichResponse()
-    .addSimpleResponse('Alright'),
+    .addSimpleResponse(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`),
     // Build a list
       app1.buildList('Flight Status')
     // Add the first item to the list
@@ -137,52 +117,20 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       .setDescription(`${airports} - ${airportd}`)
     )
   );
+ //=====================================================
+ 
+app1.ask(app1.buildRichResponse()
+    // Create a basic card and add it to the rich response
 
-//  app1.ask(app1.buildRichResponse()
-//     // Create a basic card and add it to the rich response
+    .addSimpleResponse('Math and prime numbers it is!')
+    .addBasicCard(app1.buildBasicCard(`* ${sourcecarrier} => ${destcarrier} * \n\n\n* * Departure: ** \n\n${datedep}\n\n${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}
+\n\n\n ** Arrival: ** \n\n${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:\n${estimateda.substring(0, estimateda.length-4)}`)
+      .setTitle('Flight Status')
+      .setImage('https://lh3.googleusercontent.com/K7IBRJz-E1h4gR0wfpcCzwf1MVxV8LXHpqFfKctPdiC54e9GUNTqC_vi_Mhe4KWcB5XnT2ku=w50-h50-e365')
+    )
+  );
 
-//     .addSimpleResponse('Math and prime numbers it is!')
-//     .addBasicCard(app1.buildBasicCard(`42 is an even composite number. It 
-//       is composed of three distinct prime numbers multiplied together. It 
-//       has a total of eight divisors. 42 is an abundant number, because the 
-//       sum of its proper divisors 54 is greater than itself. To count from 
-//       1 to 42 would take you about twenty-one…`)
-//       .setTitle('Math & prime numbers')
-//       .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Image alternate text') 
-//       .setTitle('Math & prime numbers')
-//       .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Image alternate text')
-//     )
-
-                                
-                                
-//                                  app1.askWithList(app1.buildRichResponse()
-//     .addSimpleResponse('Alright'),
-//     // Build a list
-//     app1.buildList('FLIGHT STATUS')
-//     // Add the first item to the list
-//     .addItems(app1.buildOptionItem()
-//       .setTitle('SOURCE')
-//       .setDescription('42 is an abundant number because the sum of its ' +
-//         'proper divisors 54 is greater…')
-//       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Math & prime numbers'))
-//     // Add the second item to the list
-//     .addItems(app1.buildOptionItem('EGYPT',
-//       ['religion', 'egpyt', 'ancient egyptian'])
-//       .setTitle('Ancient Egyptian religion')
-//       .setDescription('42 gods who ruled on the fate of the dead in the ' +
-//         'afterworld. Throughout the under…')
-//       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Egypt')
-//     )
-//     // Add third item to the list
-//     .addItems(app1.buildOptionItem('RECIPES',
-//       ['recipes', 'recipe', '42 recipes'])
-//       .setTitle('42 recipes with 42 ingredients')
-//       .setDescription('Here\'s a beautifully simple recipe that\'s full ' +
-//         'of flavor! All you need is some ginger and…')
-//       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe')
-//     )
-//   );
-//      app1.ask(app1.buildOrder("200").setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png'));                       
+                     
                             }
                         }
                     }
