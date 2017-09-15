@@ -111,8 +111,8 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     // Add the second item to the list
     .addItems(app1.buildOptionItem('RECIPES',
       ['recipes', 'recipe', '42 recipes'])
-      .setTitle(`${datedep}`)
-      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
+      .setTitle(datedep)
+      .setDescription(scheduledd.substring(0, scheduledd.length-4)+'\n\nEst:\n'+estimatedd.substring(0, estimatedd.length-4))
       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe')
     )
   );
