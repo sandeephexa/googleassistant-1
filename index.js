@@ -94,14 +94,11 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
                                 //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd} , Arrival ${estimateda}. Schedule Departure ${scheduledd} , Arrival ${scheduleda}. Do u want to know anything else?`);
 //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`);
 app1.askWithList(app1.buildRichResponse()
-    .addSimpleResponse('Alright')
-    .addSuggestions(
-      ['Basic Card', 'List', 'Carousel', 'Suggestions']),
+    .addSimpleResponse(''),
     // Build a list
-    app1.buildList('Things to learn about')
+    app1.buildList('Flight Status')
     // Add the first item to the list
-    .addItems(app1.buildOptionItem('MATH_AND_PRIME',
-      ['math', 'math and prime', 'prime numbers', 'prime'])
+    .addItems(app1.buildOptionItem('MATH_AND_PRIME')
       .setTitle('Math & prime numbers')
       .setDescription('42 is an abundant number because the sum of its ' +
         'proper divisors 54 is greater…')
