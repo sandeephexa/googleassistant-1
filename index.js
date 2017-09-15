@@ -97,6 +97,36 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
                                     .setTitle('Math & prime numbers')
                                     .addButton('Read more', 'https://example.google.com/mathandprimes')
                                     .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Image alternate text')));
+                                 app.askWithList(app.buildRichResponse()
+    .addSimpleResponse('Alright')
+    .addSuggestions(
+      ['Basic Card', 'List', 'Carousel', 'Suggestions']),
+    // Build a list
+    app1.buildList('Things to learn about')
+    // Add the first item to the list
+    .addItems(app1.buildOptionItem('MATH_AND_PRIME',
+      ['math', 'math and prime', 'prime numbers', 'prime'])
+      .setTitle('Math & prime numbers')
+      .setDescription('42 is an abundant number because the sum of its ' +
+        'proper divisors 54 is greater…')
+      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Math & prime numbers'))
+    // Add the second item to the list
+    .addItems(app1.buildOptionItem('EGYPT',
+      ['religion', 'egpyt', 'ancient egyptian'])
+      .setTitle('Ancient Egyptian religion')
+      .setDescription('42 gods who ruled on the fate of the dead in the ' +
+        'afterworld. Throughout the under…')
+      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Egypt')
+    )
+    // Add third item to the list
+    .addItems(app1.buildOptionItem('RECIPES',
+      ['recipes', 'recipe', '42 recipes'])
+      .setTitle('42 recipes with 42 ingredients')
+      .setDescription('Here\'s a beautifully simple recipe that\'s full ' +
+        'of flavor! All you need is some ginger and…')
+      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe')
+    )
+  );
                             }
                         }
                     }
