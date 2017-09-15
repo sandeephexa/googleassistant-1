@@ -127,7 +127,8 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       sum of its proper divisors 54 is greater than itself. To count from 
       1 to 42 would take you about twenty-one…`)
       .setTitle('Math & prime numbers')
-      .addButton('Read more', 'https://example.google.com/mathandprimes')
+      .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Image alternate text') 
+      .setTitle('Math & prime numbers')
       .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Image alternate text')
     )
   );
