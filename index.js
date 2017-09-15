@@ -102,17 +102,17 @@ app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} $
     // Build a list
     app1.buildList('list2')
     // Add the first item to the list
-    .addItems(app1.buildBasicCard()
+    .addItems(app1.buildOptionItem()
       .setTitle(`${datedep}`)
       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
        .setImage('https://lh3.googleusercontent.com/K7IBRJz-E1h4gR0wfpcCzwf1MVxV8LXHpqFfKctPdiC54e9GUNTqC_vi_Mhe4KWcB5XnT2ku=w50-h50-e365', 'Departure',50,50)
       )
     // Add the second item to the list
-    .addItems(app1.buildBasicCard()
+    .addItems(app1.buildOptionItem()
       .setTitle(`Arrival`)
       .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:\n${estimateda.substring(0, estimateda.length-4)}`)
       .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Recipe')
-    ).addItems(app1.buildBasicCard().setTitle(`${sourcecarrier} => ${destcarrier}`)
+    ).addItems(app1.buildOptionItem().setTitle(`${sourcecarrier} => ${destcarrier}`)
       .setDescription(`${airports} - ${airportd}`)
     )
   );
