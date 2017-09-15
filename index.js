@@ -109,18 +109,12 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
        .setImage('http://i.picresize.com/images/2017/09/15/A6hve.png', 'Departure',50,50)
       )
     // Add the second item to the list
-    .addItems(app1.buildOptionItem('EGYPT',
-      ['religion', 'egpyt', 'ancient egyptian'])
-      .setTitle(`${datearr}`)
-      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEstimated:\n${estimatedd.substring(0, estimatedd.length-4)}`)
-      .setImage('http://i.picresize.com/images/2017/09/15/QES3.png', 'Egypt',25,25)
-    )
-    // Add third item to the list
     .addItems(app1.buildOptionItem('RECIPES',
       ['recipes', 'recipe', '42 recipes'])
-      .setTitle(`${datearr}`)
-      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEstimated:\n${estimatedd.substring(0, estimatedd.length-4)}`)
-      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe',50,50)
+      .setTitle('42 recipes with 42 ingredients')
+      .setDescription('Here\'s a beautifully simple recipe that\'s full ' +
+        'of flavor! All you need is some ginger and…')
+      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe')
     )
   );
 
