@@ -93,10 +93,10 @@ var myKeys = Object.keys(flightstatus)
 newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
                                 //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd} , Arrival ${estimateda}. Schedule Departure ${scheduledd} , Arrival ${scheduleda}. Do u want to know anything else?`);
 //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`);
- //app1.ask(app1.buildRichResponse().addSimpleResponse('Srinivasan is teh good boy').addBasicCard(app1.buildBasicCard(``)
-                                  //  .setTitle('Math & prime numbers')
-//.addButton('Read more', 'https://example.google.com/mathandprimes')
-                                    //.setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Image alternate text')));
+ app1.ask(app1.buildRichResponse().addSimpleResponse('Srinivasan is teh good boy').addBasicCard(app1.buildBasicCard(``)
+                                   .setTitle('Math & prime numbers')
+.addButton('Read more', 'https://example.google.com/mathandprimes')
+                                    .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Image alternate text')));
 //                                  app1.askWithList(app1.buildRichResponse()
 //     .addSimpleResponse('Alright'),
 //     // Build a list
@@ -124,7 +124,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
 //       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe')
 //     )
 //   );
-     app1.ask(app1.buildOrder("200").setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png'));                       
+//      app1.ask(app1.buildOrder("200").setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png'));                       
                             }
                         }
                     }
