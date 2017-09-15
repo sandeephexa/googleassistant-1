@@ -102,16 +102,15 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     // Add the first item to the list
     .addItems(app1.buildOptionItem('MATH_AND_PRIME',
       ['math', 'math and prime', 'prime numbers', 'prime'])
-      .setTitle('Math & prime numbers')
-      .setDescription('42 is an abundant number because the sum of its ' +
-        'proper divisors 54 is greater…').setTitle('Math & prime numbers')
+      .setTitle('Dep')
       .setDescription('42 is an abundant number because the sum of its ' +
         'proper divisors 54 is greater…')
+       .setImage('http://www.clker.com/cliparts/B/X/8/8/p/r/departures-airport-sign-th.png', 'Departure')
       )
     // Add the second item to the list
     .addItems(app1.buildOptionItem('EGYPT',
       ['religion', 'egpyt', 'ancient egyptian'])
-      .setTitle('Ancient Egyptian religion')
+      .setTitle('Arr')
       .setDescription('42 gods who ruled on the fate of the dead in the ' +
         'afterworld. Throughout the under…')
       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Egypt')
