@@ -124,7 +124,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
 //       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe')
 //     )
 //   );
-                                app1.askWithList('Which of these looks good',app1.buildOrder("200").setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png'))
+     app1.buildOrder("200").setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png'));                       
                             }
                         }
                     }
