@@ -109,11 +109,11 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
        .setImage('https://lh3.googleusercontent.com/K7IBRJz-E1h4gR0wfpcCzwf1MVxV8LXHpqFfKctPdiC54e9GUNTqC_vi_Mhe4KWcB5XnT2ku=w50-h50-e365', 'Departure',50,50)
       )
     // Add the second item to the list
-    .addItems(app1.buildList('list3')
+    .addItems(app1.buildOptionItem('list3')
       .setTitle(`Arrival`)
       .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:\n${estimateda.substring(0, estimateda.length-4)}`)
       .setImage('http://grfx.cstv.com/story-nav/icon-plus3.png', 'Recipe')
-    ).addItems(app1.buildList('list4').setTitle(`${sourcecarrier} => ${destcarrier}`)
+    ).addItems(app1.buildOptionItem('list4').setTitle(`${sourcecarrier} => ${destcarrier}`)
       .setDescription(`${airports} - ${airportd}`)
     )
   );
