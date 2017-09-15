@@ -98,11 +98,9 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
 //.addButton('Read more', 'https://example.google.com/mathandprimes')
                                     //.setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Image alternate text')));
                                  app1.askWithList(app1.buildRichResponse()
-    .addSimpleResponse('Alright')
-    .addSuggestions(
-      ['Basic Card', 'List', 'Carousel', 'Suggestions']),
+    .addSimpleResponse('Alright'),
     // Build a list
-    app1.buildList('Things to learn about')
+    app1.buildList('FLIGHT STATUS')
     // Add the first item to the list
     .addItems(app1.buildOptionItem('MATH_AND_PRIME',
       ['math', 'math and prime', 'prime numbers', 'prime'])
