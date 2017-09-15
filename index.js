@@ -106,14 +106,14 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       ['math', 'math and prime', 'prime numbers', 'prime'])
       .setTitle(`${datedep}`)
       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
-       .setImage('http://www.clker.com/cliparts/B/X/8/8/p/r/departures-airport-sign-th.png', 'Departure',50,50)
+       .setImage('http://i.picresize.com/images/2017/09/15/A6hve.png', 'Departure',50,50)
       )
     // Add the second item to the list
     .addItems(app1.buildOptionItem('EGYPT',
       ['religion', 'egpyt', 'ancient egyptian'])
       .setTitle(`${datearr}`)
       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEstimated:\n${estimatedd.substring(0, estimatedd.length-4)}`)
-      .setImage('http://www.drivesafe.org.nz/themes/drivesafeorgnz-theme/images/arrival-icon.svg', 'Egypt',25,25)
+      .setImage('http://i.picresize.com/images/2017/09/15/QES3.png', 'Egypt',25,25)
     )
     // Add third item to the list
     .addItems(app1.buildOptionItem('RECIPES',
