@@ -95,11 +95,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
 //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`);
  app1.ask(app1.buildRichResponse().addSimpleResponse('Srinivasan is teh good boy').addBasicCard(app1.buildBasicCard(``)
                                    .setTitle('Flight Status')
-                                   .setImage('https://example.google.com/42.png', 'Image alternate text').addItems(app1.buildOptionItem()
-      .setTitle('SOURCE')
-      .setDescription('42 is an abundant number because the sum of its ' +
-        'proper divisors 54 is greater…')
-      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Math & prime numbers'))
+                                   .setImage('https://example.google.com/42.png', 'Image alternate text')
     // Add the second item to the list
     .addItems(app1.buildOptionItem('EGYPT',
       ['religion', 'egpyt', 'ancient egyptian'])
