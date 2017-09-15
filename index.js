@@ -106,7 +106,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       ['math', 'math and prime', 'prime numbers', 'prime'])
       .setTitle(`${datedep}`)
       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
-       .setImage('http://i.picresize.com/images/2017/09/15/A6hve.png', 'Departure',50,50)
+       .setImage('./A6hve.png', 'Departure',50,50)
       )
     // Add the second item to the list
     .addItems(app1.buildOptionItem('RECIPES',
