@@ -105,7 +105,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       .setTitle('Dep')
       .setDescription('42 is an abundant number because the sum of its ' +
         'proper divisors 54 is greater…')
-       .setImage('http://www.clker.com/cliparts/B/X/8/8/p/r/departures-airport-sign-th.png', 'Departure')
+       .setImage('http://www.clker.com/cliparts/B/X/8/8/p/r/departures-airport-sign-th.png', 'Departure',50,50)
       )
     // Add the second item to the list
     .addItems(app1.buildOptionItem('EGYPT',
@@ -113,7 +113,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       .setTitle('Arr')
       .setDescription('42 gods who ruled on the fate of the dead in the ' +
         'afterworld. Throughout the under…')
-      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Egypt')
+      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Egypt',50,50)
     )
     // Add third item to the list
     .addItems(app1.buildOptionItem('RECIPES',
@@ -121,7 +121,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       .setTitle('42 recipes with 42 ingredients')
       .setDescription('Here\'s a beautifully simple recipe that\'s full ' +
         'of flavor! All you need is some ginger and…')
-      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe')
+      .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe',50,50)
     )
   );
 
