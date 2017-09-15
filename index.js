@@ -95,7 +95,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
 //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`);
  app1.ask(app1.buildRichResponse().addSimpleResponse('Srinivasan is teh good boy').addBasicCard(app1.buildBasicCard(``)
                                    .setTitle('Flight Status')
-                                   .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Image alternate text')));
+                                   .setImage('https://example.google.com/42.png', 'Image alternate text').addItems(app1.buildOptionItem('SRINI').setTitle('srinivasan').setImage('https://example.google.com/42.png'))));
 //                                  app1.askWithList(app1.buildRichResponse()
 //     .addSimpleResponse('Alright'),
 //     // Build a list
