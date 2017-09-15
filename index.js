@@ -115,7 +115,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       .setDescription('Here\'s a beautifully simple recipe that\'s full ' +
         'of flavor! All you need is some ginger and…')
       .setImage('http://images.dailytech.com/frontpage/fp__fp-plane.png', 'Recipe')
-    ))));
+    )));
 //                                  app1.askWithList(app1.buildRichResponse()
 //     .addSimpleResponse('Alright'),
 //     // Build a list
